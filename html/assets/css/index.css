@@ -1,9 +1,8 @@
 :root {
-	--primary: #9a26ff;
-	--primary-active: #8e2ae7;
-	--primary-bg: #f2e3ff;
-	--secondary: #655e6c;
-	--secondary-bg: #e7cbff;
+    --primary: #ff2b6d;
+    --primary-active: #e33f72;
+    --primary-bg: #fff3f7;
+    --secondary: #655e6c;
 }
 
 body {
@@ -35,6 +34,10 @@ button {
 	flex-grow: 1;
 }
 
+.flex-wrap {
+	flex-wrap: wrap;
+}
+
 .container {
 	margin: 0 auto;
 	padding: 0 calc(100vw * 0.05);
@@ -62,6 +65,10 @@ button {
 	flex-flow: column;
 }
 
+.flex-content-center {
+	align-content: center;
+}
+
 .full-width {
 	width: 100%;
 }
@@ -80,6 +87,7 @@ button {
 
 .nav {
 	display: flex;
+	z-index: 2;
 	background: #fff;
 	box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
@@ -95,12 +103,12 @@ button {
 .nav .buttons {
 	display: inline-flex;
 	align-items: center;
-	margin: 0!important;
+	padding: 0!important;
 }
 
 .nav .title {
 	font-weight: 700;
-	font-size: 1.25rem;
+	font-size: 1.3rem;
 	color: var(--primary);
 	text-decoration: none;
 }
@@ -114,10 +122,17 @@ button {
 
 .spacer {
 	padding: 1rem;
-}
+}	
 
 .info {
 	line-height: normal;
+	margin: 1rem;
+}
+
+@media only screen and (max-width: 667px) {
+	.info {
+		text-align: center;
+	}
 }
 
 .info h1 {
@@ -128,7 +143,7 @@ button {
 }
 
 .info .subtitle {
-	margin: 0.25rem 0 1rem 0;
+	margin: 0.25rem 0;
 	font-size: 1.5rem;
 }
 
@@ -137,7 +152,7 @@ article {
 }
 
 .buttons {
-	margin-bottom: 1rem;
+	padding: 0.75rem 0;
 	display: flex;
 }
 
@@ -161,7 +176,7 @@ article {
 	border-radius: 8px;
 	box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
 		rgba(0, 0, 0, 0.06) 0px 1px 2px 0px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
-	transition: box-shadow 0.15s ease-out, background-color 0.15s ease-out;
+	transition: box-shadow 0.15s ease-out, background-color 0.15s ease-out, fill 0.15 ease-out;
 }
 
 .button svg {
@@ -197,6 +212,15 @@ article {
 	padding: 0.5em 1.5rem;
 }
 
+.button.iconOnly {
+	background: none;
+	box-shadow: none;
+}
+
+.button.iconOnly:hover svg {
+	fill: var(--primary);
+}
+
 .topHeader {
 	display: flex;
 	align-items: center;
@@ -211,9 +235,10 @@ article {
 }
 
 footer {
+	display: flex;
 	margin: 3rem auto 0 auto;
 	padding: 1rem calc(100vw * 0.05);
-	background-color: var(--secondary-bg);
+	background-color: rgba(0, 0, 0, 0.028);
 }
 
 footer h1, footer h2, footer h3, footer h4 {
