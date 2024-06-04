@@ -1,0 +1,221 @@
+:root {
+	--primary: #9a26ff;
+	--primary-active: #8e2ae7;
+	--primary-bg: #f2e3ff;
+	--secondary: #655e6c;
+	--secondary-bg: #e7cbff;
+}
+
+body {
+	background: var(--primary-bg);
+	margin: 0;
+	font-family: "Wix Madefor Display", sans-serif;
+	font-optical-sizing: auto;
+	font-style: normal;
+	color: var(--secondary);
+}
+
+a {
+	text-decoration: none;
+	color: var(--primary);
+}
+
+button {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.flex-grow {
+	display: flex;
+	flex-grow: 1;
+}
+
+.container {
+	margin: 0 auto;
+	padding: 0 calc(100vw * 0.05);
+}
+
+.container.fullHeight {
+	height: 100vh;
+}
+
+.container.center {
+	align-items: center;
+	justify-content: center;
+}
+
+.flex {
+	display: flex;
+}
+
+.flex-grow {
+	display: flex;
+	flex-grow: 1;
+}
+
+.flex-column {
+	flex-flow: column;
+}
+
+.full-width {
+	width: 100%;
+}
+
+.margin-top {
+	margin-top: 1rem;
+}
+
+.margin-bottom {
+	margin-bottom: 1rem;
+}
+
+.title.primary {
+	color: var(--primary);
+}
+
+.nav {
+	display: flex;
+	background: #fff;
+	box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.nav .container {
+	display: flex;
+	align-items: center;
+	height: auto;
+	line-height: normal;
+	padding: 0.75rem 12px;
+}
+
+.nav .buttons {
+	display: inline-flex;
+	align-items: center;
+	margin: 0!important;
+}
+
+.nav .title {
+	font-weight: 700;
+	font-size: 1.25rem;
+	color: var(--primary);
+	text-decoration: none;
+}
+
+.pfp img {
+	object-fit: cover;
+	width: 250px;
+	height: 250px;
+	border-radius: 50%;
+}
+
+.spacer {
+	padding: 1rem;
+}
+
+.info {
+	line-height: normal;
+}
+
+.info h1 {
+	color: var(--primary);
+	font-weight: 800;
+	font-size: 2.75rem;
+	margin: 0;
+}
+
+.info .subtitle {
+	margin: 0.25rem 0 1rem 0;
+	font-size: 1.5rem;
+}
+
+article {
+	display: block;
+}
+
+.buttons {
+	margin-bottom: 1rem;
+	display: flex;
+}
+
+.buttons .button.primary:first-child {
+	margin-right: 8px;
+}
+
+.buttons .button:not(:first-child) {
+	margin-left: 8px;
+}
+
+.button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	text-decoration: none;
+	font-weight: 600;
+	background: #fff;
+	padding: 0.5em 1rem;
+	border-radius: 8px;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+		rgba(0, 0, 0, 0.06) 0px 1px 2px 0px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+	transition: box-shadow 0.15s ease-out, background-color 0.15s ease-out;
+}
+
+.button svg {
+	width: 24px;
+	height: 24px;
+}
+
+.button:hover {
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+		rgba(0, 0, 0, 0.06) 0px 2px 4px -1px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+
+.button:focus {
+	background: #f8f8f8;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+		rgba(0, 0, 0, 0.05) 0px 4px 6px -2px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+
+.button.primary {
+	background: var(--primary);
+	color: #fff;
+}
+
+.button.primary:hover {
+	/* 	background: #a33aff; */
+}
+
+.button.primary:focus {
+	background: var(--primary-active);
+}
+
+.button.wide {
+	padding: 0.5em 1.5rem;
+}
+
+.topHeader {
+	display: flex;
+	align-items: center;
+	align-content: center;
+	width: 100%;
+}
+
+.topHeader .buttons {
+	margin: 0;
+	justify-content: flex-end;
+	align-content: center;
+}
+
+footer {
+	margin: 3rem auto 0 auto;
+	padding: 1rem calc(100vw * 0.05);
+	background-color: var(--secondary-bg);
+}
+
+footer h1, footer h2, footer h3, footer h4 {
+	margin: 0;
+}
