@@ -5,9 +5,9 @@
     --secondary: #655e6c;
 } */
 
-:root {
+:root, .default-theme {
 	--primary: #bd20e9;
-	--text: #2c1b33;
+	--text: #25172b;
 	--background: #fbfafc;
 	--secondary: #c591d4;
 	--accent: #bd6fd3;
@@ -112,7 +112,7 @@ button {
 .nav {
 	display: flex;
 	z-index: 2;
-	background-color: #fff;
+	background-color: var(--button-bg-active);
 	box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 
