@@ -1,17 +1,37 @@
-:root {
+/* :root {
     --primary: #ff2b6d;
     --primary-active: #e33f72;
     --primary-bg: #fff3f7;
     --secondary: #655e6c;
+} */
+
+:root {
+	--primary: #bd20e9;
+	--text: #2c1b33;
+	--background: #fbfafc;
+	--secondary: #c591d4;
+	--accent: #bd6fd3;
+	--button-bg: #fff;
+	--button-bg-active: #f8f8f8;
+}
+
+.dark-theme {
+	--primary: #b316df;
+	--text: #f3f0f4;
+	--background: #1c1820;
+	--secondary: #602b6e;
+	--accent: #7b2c90;
+	--button-bg: #1f1f1f;
+	--button-bg-active: #161616;
 }
 
 body {
-	background: var(--primary-bg);
+	background: var(--background);
 	margin: 0;
 	font-family: "Wix Madefor Display", sans-serif;
 	font-optical-sizing: auto;
 	font-style: normal;
-	color: var(--secondary);
+	color: var(--text);
 }
 
 a {
@@ -85,10 +105,14 @@ button {
 	color: var(--primary);
 }
 
+.txt-primary {
+	color: var(--primary);
+}
+
 .nav {
 	display: flex;
 	z-index: 2;
-	background: #fff;
+	background-color: #fff;
 	box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 
@@ -108,9 +132,11 @@ button {
 
 .nav .title {
 	font-weight: 700;
-	font-size: 1.3rem;
+	font-size: 1.5rem;
 	color: var(--primary);
 	text-decoration: none;
+	margin: 0;
+	padding: 1rem 0;
 }
 
 .pfp img {
@@ -126,7 +152,7 @@ button {
 
 .info {
 	line-height: normal;
-	margin: 1rem;
+	padding: 1.75rem;
 }
 
 @media only screen and (max-width: 667px) {
@@ -143,12 +169,22 @@ button {
 }
 
 .info .subtitle {
-	margin: 0.25rem 0;
+	color: var(--text);
 	font-size: 1.5rem;
+	margin: 0;
+	padding: 0.75rem 0;
 }
 
 article {
 	display: block;
+}
+
+article h2, article h3, article h4 {
+	margin: 0.75rem 0;
+}
+
+.info-block {
+	padding-bottom: 0.25rem;
 }
 
 .buttons {
@@ -171,7 +207,9 @@ article {
 	cursor: pointer;
 	text-decoration: none;
 	font-weight: 600;
-	background: #fff;
+	background-color: var(--button-bg);
+	color: var(--text);
+	fill: var(--text);
 	padding: 0.5em 1rem;
 	border-radius: 8px;
 	box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
@@ -190,7 +228,7 @@ article {
 }
 
 .button:focus {
-	background: #f8f8f8;
+	background: var(--button-bg-active);
 	box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
 		rgba(0, 0, 0, 0.05) 0px 4px 6px -2px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
 }
@@ -205,7 +243,7 @@ article {
 }
 
 .button.primary:focus {
-	background: var(--primary-active);
+	background: var(--accent);
 }
 
 .button.wide {
