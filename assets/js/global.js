@@ -5,6 +5,7 @@ function $(qs) {
 
 function refreshTheme() {
     let themeName = localStorage.getItem("theme") || "default-theme";
+    document.documentElement.classList = "";
     document.documentElement.className = themeName;
 }
 
