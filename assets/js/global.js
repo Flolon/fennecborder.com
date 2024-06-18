@@ -3,10 +3,33 @@ function $(qs) {
 	return document.querySelectorAll(qs);
 }
 
+function updateThemeSelector() {
+	let themeSelector = $("#changeThemeBtn");
+	if (themeSelector) {
+		const svg = document.createElement("svg");
+		if (localStorage.getItem("theme") === null || localStorage.getItem("theme") === "default-theme") {
+			svg.innerHTML = darkTheme;
+		} else {
+			svg.innerHTML = lightTheme;
+		}
+		themeSelector.querySelector("svg").remove();
+		themeSelector.append(svg);
+	}
+}
+
 function refreshTheme() {
-    let themeName = localStorage.getItem("theme") || "default-theme";
-    document.documentElement.classList = "";
-    document.documentElement.className = themeName;
+	const darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
+	if (!localStorage.getItem("theme")) {
+		if (darkThemeMq.matches) {
+			localStorage.setItem("theme", "dark-theme");
+		} else {
+			localStorage.setItem("theme", "default-theme");
+		}
+	}
+	let themeName = localStorage.getItem("theme") || "default-theme";
+	document.documentElement.classList = "";
+	document.documentElement.className = themeName;
+	updateThemeSelector();
 }
 
 // Icons
