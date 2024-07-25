@@ -1,20 +1,20 @@
 :root,
 .default-theme {
 	--text: #1a071f;
-	--background: #fbf3fd;
-	--primary: #a638d5;
-	--secondary: #e894d9;
-	--accent: #de63bb;
+	--background: #fff2f5;
+	--primary: #ee8a9f;
+	--secondary: #ba687a;
+	--accent: #ac6070;
 	--button-bg: #fff;
-	--button-bg-active: #f8f8f8;
+	--button-bg-active: #fcf4f6;
 }
 
 .dark-theme {
-	--text: #f4e2f8;
+	--text: #f8e2ec;
 	--background: #0b020d;
-	--primary: #972ac6;
-	--secondary: #69165a;
-	--accent: #9c2179;
+	--primary: #ff9fb4;
+	--secondary: #aa586a;
+	--accent: #a05565;
 	--button-bg: #1f1f1f;
 	--button-bg-active: #161616;
 }
